@@ -21,4 +21,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
+Route::group(['namespace' => 'App\Http\Controllers\User', 'prefix' => '/user'], function (){
+    Route::get('/', 'IndexController')->name('user.index');
+});
