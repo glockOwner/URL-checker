@@ -5,6 +5,12 @@ header
     display: flex;
     justify-content: space-around;
     align-items: center;
+ }
+
+main
+{
+    min-height: 400px;
+    width: 100%;
 }
 
 footer
