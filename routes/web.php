@@ -22,6 +22,6 @@ Route::group(['namespace' => 'App\Http\Controllers\User', 'prefix' => '/user'], 
     Route::get('/', 'IndexController')->name('user.index');
 });
 
-Route::group(['namespace' => 'App\Http\Controllers\User', 'prefix' => '/user'], function (){
-    Route::get('/', 'IndexController')->name('user.index');
+Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => '/admin'], function (){
+    Route::get('/', 'IndexController')->name('admin.index');
 });
