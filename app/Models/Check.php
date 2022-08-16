@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Url extends Model
+class Check extends Model
 {
     use HasFactory;
-    protected $guarded = [];
 
-    public function checks()
+    public function url()
     {
-        return $this->hasMany(Check::class);
+        return $this->belongsTo(Url::class);
     }
 }
