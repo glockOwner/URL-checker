@@ -18,7 +18,7 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::group(['namespace' => 'App\Http\Controllers\User', 'prefix' => '/user'], function (){
+Route::group(['namespace' => 'App\Http\Controllers\User', 'prefix' => '/user', 'middleware' => 'checkURL'], function (){
     Route::get('/', 'IndexController')->name('user.index');
 });
 

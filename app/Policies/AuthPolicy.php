@@ -29,7 +29,7 @@ class AuthPolicy
      */
     public function view(User $user, User $model)
     {
-        return $model;
+        return $model->role === 'admin';
     }
 
     /**
