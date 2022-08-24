@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Components;
 use GuzzleHttp\Client;
 
 class HttpClient
@@ -9,11 +9,11 @@ class HttpClient
     /**
      * @param $client
      */
-    public function __construct($client)
+    public function __construct($url)
     {
-        $client = new Client([
+        $this->client = new Client([
             // Base URI is used with relative requests
-            'base_uri' => 'http://httpbin.org',
+            'base_uri' => $url,
             // You can set any number of default request options.
             'timeout'  => 2.0,
             'verify' => false,

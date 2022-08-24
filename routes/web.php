@@ -20,7 +20,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['namespace' => 'App\Http\Controllers\User', 'prefix' => '/user', 'middleware' => 'checkURL'], function (){
     Route::get('/', 'IndexController')->name('user.index');
+    Route::post('/checkUrl', 'CheckController')->name('user.check');
+    Route::get('/mychecks', 'MyChecksController')->name('user.checks');
 });
+
 
 Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => '/admin'], function (){
     Route::get('/', 'IndexController')->name('admin.index');

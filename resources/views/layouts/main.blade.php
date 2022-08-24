@@ -15,6 +15,9 @@
             <li class="nav-item">
                 <a class="nav-link {{'http://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] == route('user.index') ? 'disabled' : ''}}" aria-current="page" href="{{route('user.index')}}">Проверка URL</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link {{'http://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] == route('user.checks') ? 'disabled' : ''}}" aria-current="page" href="{{route('user.checks')}}">Мои проверки</a>
+            </li>
             @can('view', auth()->user())
                 <li class="nav-item">
                     <a class="nav-link " aria-current="page" href="{{route('admin.index')}}">Админ-панель</a>
